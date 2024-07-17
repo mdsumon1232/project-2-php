@@ -4,9 +4,8 @@ $.ajax({
     dataType: 'json',
     success: function(response) {
         if (response.status === 'success') {
-            // Access the session data in JavaScript
-            const {user_id ,first_name,last_name,bio,prorile_img ,cover_img } = response.user;
-            // Display the session data on the page
+          console.log(response.user);
+            const {first_name,last_name,bio,prorile_img ,cover_img } = response.user;
            $("#cover").attr('src' ,`${cover_img ? cover_img : '../images/post.jpg'}`);
            $("#profile").attr('src' , `${prorile_img ? prorile_img : '../images/user.png'}`);
            $("#user_name").text(first_name + " " + last_name);

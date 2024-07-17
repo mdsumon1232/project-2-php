@@ -41,8 +41,40 @@ form h2 {
   padding: 10px;
 }
 
-# {
+#bio {
   padding: 10px;
-  font-size: 20px;
+  font-size: 15px;
   letter-spacing: 1;
+}
+.photo-upload {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+.flied_label {
+  padding: 10px;
+  color: #fff;
+  font-size: 18px;
+  background-color: #45a049;
+}
+
+.img_select {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 18px;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+.submit_btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
 }

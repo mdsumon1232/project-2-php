@@ -27,9 +27,9 @@
        
         </div>
         <div class="profile_information">
-             <h2 id="user_name"> Sumon</h2>
+             <h2 id="user_name"></h2>
              <p id="bio"></p>
-            <a>Edit profile</a>
+            <a href="../html/profile_update.php">Edit profile</a>
           </div>
           <div>
 
