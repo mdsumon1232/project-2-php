@@ -3,11 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 .container {
-  width: 100vw;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-gap: 20px; /* Optional spacing */
+  gap: 20px; /* Optional spacing */
+  width: 100vw;
+}
+
+.left_side,
+.right_side {
+  padding: 10px;
 }
 
 .create_post {
@@ -15,10 +21,7 @@
   margin: 10px auto;
   padding: 20px 0;
   border-radius: 5px;
-
   background-color: #fff;
-  -webkit-box-shadow: -3px 0px 19px -2px rgba(0, 0, 0, 0.47);
-  -moz-box-shadow: -3px 0px 19px -2px rgba(0, 0, 0, 0.47);
   box-shadow: -3px 0px 19px -2px rgba(0, 0, 0, 0.47);
 }
 
@@ -43,4 +46,8 @@
   border-radius: 10px;
   padding: 10px;
   outline: none;
+}
+
+.posts {
+  margin: 20px 0;
 }

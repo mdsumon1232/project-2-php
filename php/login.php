@@ -16,6 +16,7 @@
         $verify_password = password_verify($password, $user_password_in_db);
 
         $_SESSION['user'] = $user_data;
+        session_write_close();
 
         if($verify_password){
             echo json_encode(["status" => "success", "message" => "Login successful"]);

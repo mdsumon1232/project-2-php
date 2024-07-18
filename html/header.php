@@ -13,7 +13,7 @@
       <div class="logo">MyLogo</div>
       <nav class="nav-links" id="navLinks">
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="../html/index.php">Home</a></li>
           <li><a href="#">Report</a></li>
           <li>
             <form action="#" class="search-box">

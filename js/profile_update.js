@@ -1,20 +1,8 @@
 $(document).ready(function() {
     $('#update_form').submit(function(event) {
-      event.preventDefault(); // Prevent default form submission
+      event.preventDefault(); 
   
-      const formData = new FormData(this); // Create FormData object
-       const data = Object.entries(formData.entries());
-      // Function to convert FormData to object
-      function convertFormDataToObject(formData) {
-        const object = {};
-        for (const [key, value] of formData.entries()) {
-          object[key] = value;
-        }
-        return object;
-      }
-  
-      const formDataObject = convertFormDataToObject(formData);
-  
+      const formData = new FormData(this); 
       
     //  start ajax 
 
