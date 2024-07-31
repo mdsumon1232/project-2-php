@@ -5,6 +5,9 @@ $.ajax({
     dataType:'json',
     success:(response =>{
         response.map(data =>{
+           console.log(data);
+           const {first_name ,last_name ,article,image,prorile_img, create_at } = data;
+           console.log(first_name);
            
             let post_content = `
             <div class="post" id="post_content">
@@ -14,7 +17,7 @@ $.ajax({
                   <img src="../images/user.png" alt="user" />
                 </div>
                 <div class="profile_name">
-                  <p>Md.Sumon</p>
+                  <p${first_name + " " + last_name}</p>
                   <p class="post_date">10:30PM , 10-11-2024</p>
                 </div>
               </div>

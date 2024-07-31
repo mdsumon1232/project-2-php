@@ -27,7 +27,10 @@ if(!empty($_POST['first_name']) && !empty($_POST['last_name']) && !empty($_POST[
       $update_data_query = $conn-> query($update_data);
 
       if($update_data_query){
-        echo "user update successful";
+        $select_user_data  = "SELECT * FROM user WHERE user_id = '$user_id'";
+        $select_user_query = $conn -> query($select_user_data);
+        $user_data = mysqli_fetch_array($select_user_query);
+        $_SESSION['user'] = $user_data;
       }
       else{
         echo "something wrong";

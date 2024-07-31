@@ -13,7 +13,7 @@ $(document).ready(function() {
         processData: false, 
         contentType: false,
         success:(response)=>{
-            console.log(response);
+            location.href = "../html/profile.php";
         },
         error:(xhr , status , error)=>{
            console.log(error);
