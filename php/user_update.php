@@ -22,7 +22,7 @@ if(!empty($_POST['first_name']) && !empty($_POST['last_name']) && !empty($_POST[
    }
    else{
       $update_data = "UPDATE  user SET first_name = '$first_name' , last_name = '$last_name' , bio = '$bio' ,
-                     prorile_img = '$profile_folder' , cover_img ='$cover_folder' WHERE user_id = '$user_id' ";
+                     profile_img = '$profile_folder' , cover_img ='$cover_folder' WHERE user_id = '$user_id' ";
      
       $update_data_query = $conn-> query($update_data);
 

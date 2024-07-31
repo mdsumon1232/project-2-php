@@ -27,14 +27,14 @@
           </div>
         </div>
            <form action="" class="post_form" id="create_post" enctype="multipart/form-data">
-               <div class="image_upload">
+                 <textarea name="post"  id="post"  placeholder="write your mind"></textarea>
+              <div class="image_upload">
                  <label for="photo" class="photo_upload">
-                  <i class="fa-solid fa-images"></i>
+                  Image
                       </label>
                       <input type="file" name="photo" id="photo" hidden />
                    </div>
-                 <textarea name="post"  id="post"  placeholder="write your mind"></textarea>
-              <input type="submit" id="submit" name="submit" value="post" />
+                   <input type="submit" id="submit" name="submit" value="post" />
           </form>
         </div>
     </div>
