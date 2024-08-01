@@ -1,3 +1,4 @@
+// delete post
 const deletePost = (id) =>{
   $.ajax({
     url: '../php/delete_post.php',
@@ -11,6 +12,15 @@ const deletePost = (id) =>{
     }
   })
 } 
+
+
+// update post
+
+const updatePost = id =>{
+  location.href=`../html/post_update.php?id=${id}`;
+}
+
+// display post 
 
 $.ajax({
     url:'../php/post_display.php',
@@ -36,7 +46,7 @@ $.ajax({
               <div class="post_action">
                 <span id="postAction"><i class="fa-solid fa-ellipsis-vertical"></i></span>
                 <ul class="action_list" id="post_action_list">
-                  <li><a href="">Edit</a></li>
+                  <li onClick="updatePost(${post_id}) ">Edit</li>
                   <li onClick='deletePost(${post_id})'>Delete</li>
                 </ul>
               </div>
