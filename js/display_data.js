@@ -1,16 +1,28 @@
+const deletePost = (id) =>{
+  $.ajax({
+    url: '../php/delete_post.php',
+    type:'POST',
+    data:{id:id},
+    success:(response)=>{
+      $('#post_content-' + id).remove();
+    },
+    error:  (xhr , status ,error)=>{
+      console.log(error);
+    }
+  })
+} 
 
 $.ajax({
     url:'../php/post_display.php',
     type:'GET',
     dataType:'json',
     success:(response =>{
-        response.map(data =>{
-           console.log(data);
-           const {first_name ,last_name ,article,image,profile_img, create_at } = data;
-           console.log(first_name , last_name);
+      const posts = response.reverse();
+        posts.map(data =>{
+           const {post_id , first_name ,last_name ,article,image,profile_img, create_at } = data;
            
             let post_content = `
-            <div class="post" id="post_content">
+            <div class="post" id="post_content-${post_id}">
             <div class="post_header">
               <div class="profile_info">
                 <div class="profile_img">
@@ -25,7 +37,7 @@ $.ajax({
                 <span id="postAction"><i class="fa-solid fa-ellipsis-vertical"></i></span>
                 <ul class="action_list" id="post_action_list">
                   <li><a href="">Edit</a></li>
-                  <li><a href="">Delete</a></li>
+                  <li onClick='deletePost(${post_id})'>Delete</li>
                 </ul>
               </div>
             </div>
@@ -55,10 +67,10 @@ $.ajax({
         `;
 
         $("#posts_container").append(post_content);
-
         })
     }),
     error:(xhr , status ,error)=>{
         console.log(error);
     }
 })
+

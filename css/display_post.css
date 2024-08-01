@@ -62,9 +62,6 @@
 }
 .action_list li {
   margin: 5px 0;
-}
-.action_list li a {
-  text-decoration: none;
   font-size: 18px;
 }
 

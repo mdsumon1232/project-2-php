@@ -12,6 +12,7 @@
             contentType:false,
             success:( response) =>{
                 console.log(response);
+                location.href="../html/index.php";
             },
             error:(xhr , status , error)=>{
                 console.log(error);
